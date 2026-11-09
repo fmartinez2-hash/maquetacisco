@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maqueta Cisco NetAcad - Bootstrap 5 Grid</title>
+  
+  <!-- CSS Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    /* Estilos personalizados para el efecto de scroll (Scroll-Fade) */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .fade-in-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Ajustes visuales estilo Cisco */
+    .cisco-blue {
+      background-color: #049fd9;
+    }
+    .hero-overlay-card {
+      min-height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FILA 1: Cabecera con Navbar (Menú, Logo, Herramientas) -->
+  <header class="border-bottom sticky-top bg-white">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <!-- Columna 1: Menú Hamburguesa en móvil / Navegación -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCisco" aria-controls="navbarCisco" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Columna 2: Logo -->
+          <a class="navbar-brand me-auto ms-2 ms-lg-0 fw-bold text-primary fs-3" href="#">
+            <i class="bi bi-diagram-3-fill"></i> CISCO
+          </a>
+
+          <!-- Columna 3: Herramientas (Buscador, Usuario) -->
+          <div class="d-flex align-items-center order-lg-3 gap-3">
+            <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-person-circle fs-5"></i></a>
+          </div>
+
+          <!-- Menú desplegable -->
+          <div class="collapse navbar-collapse order-lg-2" id="navbarCisco">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Certificaciones</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Partners</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Comunidad</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container-fluid px-0">
+
+    <!-- FILA 2: Jumbotron / Hero Banner (Card Image-Overlay) -->
+    <section class="row g-0">
+      <div class="col-12">
+        <div class="card bg-dark text-white rounded-0 border-0 hero-overlay-card">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80" 
+               class="card-img rounded-0 object-fit-cover" 
+               alt="NetAcad Banner" 
+               style="max-height: 450px;" 
+               loading="lazy">
+          <div class="card-img-overlay d-flex flex-column justify-content-center bg-dark bg-opacity-50 p-5">
+            <h1 class="card-title display-4 fw-bold">Cisco Networking Academy</h1>
+            <p class="card-text fs-5 col-md-8">Transformando la educación digital y ofreciendo oportunidades profesionales globales a millones de estudiantes.</p>
+            <div>
+              <a href="#" class="btn btn-primary btn-lg mt-2">Explorar Carreras</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILAS 3 a 8: Damero intercalado (Card e Imagen esquemática) 
+         En móviles se apilan (1 columna) y en md+ pasan a 2 columnas -->
+    <section class="container my-5">
+      
+      <!-- Fila 3 (Damero 1: Texto - Imagen) -->
+      <div class="row align-items-center my-5 fade-in-on-scroll">
+        <div class="col-12 col-md-6 p-4">
+          <span class="badge bg-primary mb-2">Habilidades Prácticas</span>
+          <h2 class="fw-bold">Aprende haciendo con Packet Tracer</h2>
+          <p class="text-muted">Simula redes complejas sin necesidad de equipo físico costoso. Diseña, configura y soluciona problemas en un entorno seguro e interactivo.</p>
+          <a href="#" class="btn btn-outline-primary">Saber más</a>
+        </div>
+        <div class="col-12 col-md-6 p-4">
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" 
+               class="img-fluid rounded shadow" 
+               alt="Redes y simulación" 
+               loading="lazy">
+        </div>
+      </div>
+
+      <!-- Fila 4 (Damero 2: Imagen - Texto) -->
+      <div class="row align-items-center my-5 fade-in-on-scroll">
+        <div class="col-12 col-md-6 order-2 order-md-1 p-4">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" 
+               class="img-fluid rounded shadow" 
+               alt="Ciberseguridad" 
+               loading="lazy">
+        </div>
+        <div class="col-12 col-md-6 order-1 order-md-2 p-4">
+          <span class="badge bg-danger mb-2">Seguridad</span>
+          <h2 class="fw-bold">Especialízate en Ciberseguridad</h2>
+          <p class="text-muted">Protege redes, datos y sistemas contra ciberamenazas. Desarrolla competencias en detección de vulnerabilidades y defensa digital.</p>
+          <a href="#" class="btn btn-outline-danger">Ver Curso</a>
+        </div>
+      </div>
+
+      <!-- Fila 5 (Damero 3: Texto - Imagen) -->
+      <div class="row align-items-center my-5 fade-in-on-scroll">
+        <div class="col-12 col-md-6 p-4">
+          <span class="badge bg-success mb-2">Programación</span>
+          <h2 class="fw-bold">Python y Automatización de Redes</h2>
+          <p class="text-muted">Une la infraestructura tradicional con el software. Descubre cómo automatizar tareas repetitivas mediante APIs y scripts avanzados.</p>
+          <a href="#" class="btn btn-outline-success">Explorar Programa</a>
+        </div>
+        <div class="col-12 col-md-6 p-4">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" 
+               class="img-fluid rounded shadow" 
+               alt="Automatización de código" 
+               loading="lazy">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FILA 9 y 10 (Resumidas): Sección de ancho completo (Full Width Callout) -->
+    <section class="row g-0 bg-dark text-white text-center py-5 fade-in-on-scroll">
+      <div class="col-12 px-3">
+        <div class="py-4">
+          <h2 class="display-6 fw-bold">Únete a la comunidad de aprendizaje más grande del mundo</h2>
+          <p class="lead text-secondary">Más de 17.5 millones de estudiantes formados en 190 países.</p>
+          <button class="btn btn-light btn-lg rounded-pill px-4 mt-3">Encuentra una Academia Cercana</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILA 12: 4 Columnas con imágenes y comportamiento Collapse en pantalla pequeña -->
+    <section class="container my-5">
+      <h3 class="text-center mb-4 fw-bold">Áreas de Formación</h3>
+      <div class="row g-4">
+        
+        <!-- Columna 1 -->
+        <div class="col-12 col-lg-3 fade-in-on-scroll">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Networking" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Redes</h5>
+              <p class="card-text">Formación fundamental en arquitectura de redes.</p>
+              <button class="btn btn-sm btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo1" aria-expanded="false">
+                Detalles +
+              </button>
+              <div class="collapse mt-2" id="collapseInfo1">
+                <div class="card card-body bg-light text-dark fs-6">
+                  Incluye preparación directa para exámenes oficiales CCNA y CCNP.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-12 col-lg-3 fade-in-on-scroll">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Cybersecurity" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Ciberseguridad</h5>
+              <p class="card-text">Operaciones y análisis de seguridad avanzada.</p>
+              <button class="btn btn-sm btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo2" aria-expanded="false">
+                Detalles +
+              </button>
+              <div class="collapse mt-2" id="collapseInfo2">
+                <div class="card card-body bg-light text-dark fs-6">
+                  Prepara para puestos de Junior Cybersecurity Analyst y SOC Assistant.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-12 col-lg-3 fade-in-on-scroll">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="IoT" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">IoT & Data</h5>
+              <p class="card-text">Conexión de dispositivos y análisis masivo.</p>
+              <button class="btn btn-sm btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo3" aria-expanded="false">
+                Detalles +
+              </button>
+              <div class="collapse mt-2" id="collapseInfo3">
+                <div class="card card-body bg-light text-dark fs-6">
+                  Aprende a capturar y procesar datos masivos de sensores inteligentes.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="col-12 col-lg-3 fade-in-on-scroll">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="OS & IT" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Sistemas e IT</h5>
+              <p class="card-text">Fundamentos de Linux, hardware y SO.</p>
+              <button class="btn btn-sm btn-outline-secondary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo4" aria-expanded="false">
+                Detalles +
+              </button>
+              <div class="collapse mt-2" id="collapseInfo4">
+                <div class="card card-body bg-light text-dark fs-6">
+                  Requerido para dar soporte en entornos de administración de servidores.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FILA 13: Pie de página con Redes Sociales
+       - En pantalla normal: Fila de iconos horizontales.
+       - En pantalla pequeña: Comportamiento Accordion. -->
+  <footer class="bg-light py-4 border-top">
+    <div class="container">
+      
+      <!-- Vista Desktop (Redes en fila) -->
+      <div class="d-none d-md-flex justify-content-between align-items-center">
+        <p class="mb-0 text-muted">&copy; 2026 Cisco Systems, Inc. Todos los derechos reservados.</p>
+        <div class="fs-4 d-flex gap-3 text-secondary">
+          <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Vista Mobile (Comportamiento Accordion) -->
+      <div class="d-md-none">
+        <div class="accordion" id="footerAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSocial">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSocial" aria-expanded="false" aria-controls="collapseSocial">
+                Síguenos en Redes Sociales
+              </button>
+            </h2>
+            <div id="collapseSocial" class="accordion-collapse collapse" aria-labelledby="headingSocial" data-bs-parent="#footerAccordion">
+              <div class="accordion-body text-center fs-3 d-flex justify-content-around">
+                <a href="#" class="text-primary"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-primary"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-danger"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="text-danger"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-muted small mt-3 mb-0">&copy; 2026 Cisco Systems, Inc.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JS Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script JS para el punto extra: Efecto de aparición al hacer scroll (Intersection Observer API) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Se activa cuando el 15% del elemento es visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Animación ejecutada solo una vez
+          }
+        });
+      }, observerOptions);
+
+      // Asignar observador a todos los elementos marcados con .fade-in-on-scroll
+      document.querySelectorAll('.fade-in-on-scroll').forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
